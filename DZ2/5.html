@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /**
+   * Складывает два аргумента.
+   * @param {number} first_num - число, первый аргумент.
+   * @param {number} second_num - число, второй аргумент.
+   * @return {number} Сумма чисел.
+   */
+  function sum(first_num, second_num) {
+    return first_num + second_num;
+  }
+
+  /**
+   * Вычисляет разницу двух аргументов.
+   * @param {number} first_num - число, первый аргумент.
+   * @param {number} second_num - число, второй аргумент.
+   * @return {number} Разница чисел.
+   */
+  function diff(first_num, second_num) {
+    if (first_num > second_num) {
+      return first_num - second_num;
+    }
+    return second_num - first_num;
+  }
+
+  /**
+   * Перемножает два аргумента.
+   * @param {number} first_num - число, первый аргумент.
+   * @param {number} second_num - число, второй аргумент.
+   * @return {number} Произведение чисел.
+   */
+  function mul(first_num, second_num) {
+    return first_num * second_num;
+  }
+
+  /**
+   * Вычисляет частное двух аргументов.
+   * @param {number} first_num - число, первый аргумент.
+   * @param {number} second_num - число, второй аргумент.
+   * @return {number} Частное чисел.
+   */
+  function div(first_num, second_num) {
+    return first_num / second_num;
+  }
+  /**
+   * Производит переданную в качестве аргумента операцию с двумя другими аргументами.
+   * @param {number} first_num - число, первый аргумент.
+   * @param {number} second_num - число, второй аргумент.
+   * @param {string} oper - число, второй аргумент.
+   * @return {number} Результат операции.
+   */
+  function mathOperation(first_num, second_num, oper) {
+    switch (oper) {
+      case "+":
+        return sum(first_num, second_num);
+      case "-":
+        return diff(first_num, second_num);
+      case "*":
+        return mul(first_num, second_num);
+      case "/":
+        return div(first_num, second_num);
+      default:
+        return NaN;
+    }
+  }
+  console.log(mathOperation(5, 3, "+"));
+  console.log(mathOperation(5, 3, ":)"));
+</script>
+</body>
+</html>
