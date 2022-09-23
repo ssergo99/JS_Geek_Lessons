@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо данное задание выполнить в es5 стиле и в es6 стиле.
+Необходимо создать функцию-конструктор/класс для продукта.
+Названия: `ProductES5` для es5 стиля, `ProductES6` для es6 стиля.
+При создании объекта от функции-конструктора/класса необходимо передавать имя
+и цену товара, эта информация должна быть сохранена в объекте.
+Также у объекта должна быть возможность выполнить метод `make25Discount`, данный
+метод должен уменьшать стоимость продукта на 25%.
+Необходимо продемонстрировать работу с объектом (в свободной форме).
+-->
+<script>
+  "use strict";
+
+  function ProductES5(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  ProductES5.prototype.make25Discount = function() {
+    this.price *= 0.75;
+  };
+
+  const productES5first = new ProductES5('Монитор', 5000);
+  console.log(`Наименование товара: ${productES5first.name}, цена товара: ${productES5first.price}`);
+  productES5first.make25Discount();
+  console.log(`Наименование товара: ${productES5first.name}, цена товара: ${productES5first.price}`);
+
+  const productES5second = new ProductES5('Системный блок', 15000);
+  console.log(`Наименование товара: ${productES5second.name}, цена товара: ${productES5second.price}`);
+  productES5second.make25Discount();
+  console.log(`Наименование товара: ${productES5second.name}, цена товара: ${productES5second.price}`);
+
+
+  class ProductES6 {
+    constructor(name1, price1) {
+      this.name = name1;
+      this.price = price1;
+    }
+
+    make25Discount() {
+      this.price *= 0.75;
+    }
+  }
+
+  const productES6first = new ProductES6('Клавиатура', 500);
+  console.log(`Наименование товара: ${productES6first.name}, цена товара: ${productES6first.price}`);
+  productES6first.make25Discount();
+  console.log(`Наименование товара: ${productES6first.name}, цена товара: ${productES6first.price}`);
+
+  const productES6second = new ProductES6('Мышь', 1500);
+  console.log(`Наименование товара: ${productES6second.name}, цена товара: ${productES6second.price}`);
+  productES6second.make25Discount();
+  console.log(`Наименование товара: ${productES6second.name}, цена товара: ${productES6second.price}`);
+</script>
+</body>
+</html>
