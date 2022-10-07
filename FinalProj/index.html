@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="leftHeader">
+            <img src="images/logo.png" alt="">
+            <img class="searchIcon" src="images/search.png" alt="">
+        </div>
+
+        <div class="rightHeader">
+            <img src="images/bars.png" alt="">
+            <img class="userIcon" src="images/user.png" alt="">
+
+            <span class="cartIconWrap">
+                    <img class="cartIcon" src="images/cart.png" alt="">
+                    <span>0</span>
+                </span>
+
+            <div class="basket hidden">
+                <div class="basketRow basketHeader">
+                    <div>Наименование</div>
+                    <div>Кол-во</div>
+                    <div>Цена за ед.</div>
+                    <div>Стоимость</div>
+                </div>
+
+                <div class="basketTotal">
+                    Всего товаров сумму:
+                    <span class="basketTotalValue">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="newArrivals">
+    <div class="container">
+        <h1>НОВЫЕ ПОСТУПЛЕНИЯ</h1>
+        <nav>
+            <a href="#">ГЛАВНАЯ</a>
+            <span>/</span>
+            <a href="#">ДЛЯ МУЖЧИН</a>
+            <span>/</span>
+            <a href="#">НОВЫЕ ПОСТУПЛЕНИЯ</a>
+        </nav>
+    </div>
+</div>
+
+<div class="filters">
+    <div class="container">
+        <div class="filtersLeft">
+            <span class="filterLabel">ФИЛЬТР</span>
+            <img class="filterIcon" src="images/filter.svg" alt="">
+            <div class="filterPopup hidden">
+                <nav class="filterCategory">
+                    <div class="filterCategoryHeader">КАТЕГОРИИ</div>
+                    <div class="hidden">
+                        <a href="#">АКСЕССУАРЫ</a>
+                        <a href="#">СУМКИ</a>
+                        <a href="#">ДЖИНСЫ</a>
+                        <a href="#">ХУДИ И СВИТЕРА</a>
+                        <a href="#">КУРТКИ И ПЛАЩИ</a>
+                        <a href="#">ПОЛО</a>
+                        <a href="#">МАЙКИ</a>
+                        <a href="#">ОБУВЬ</a>
+                        <a href="#">ДЖЕМПЕРА</a>
+                        <a href="#">ФУТБОЛКИ</a>
+                        <a href="#">РЕМНИ</a>
+                    </div>
+                </nav>
+                <nav class="filterCategory">
+                    <div class="filterCategoryHeader">БРЕНДЫ</div>
+                    <div class="hidden">
+                        <a href="#">АКСЕССУАРЫ</a>
+                        <a href="#">СУМКИ</a>
+                        <a href="#">ДЖИНСЫ</a>
+                        <a href="#">ХУДИ И СВИТЕРА</a>
+                        <a href="#">КУРТКИ И ПЛАЩИ</a>
+                        <a href="#">ПОЛО</a>
+                        <a href="#">МАЙКИ</a>
+                        <a href="#">ОБУВЬ</a>
+                        <a href="#">ДЖЕМПЕРА</a>
+                        <a href="#">ФУТБОЛКИ</a>
+                        <a href="#">РЕМНИ</a>
+                    </div>
+                </nav>
+                <nav class="filterCategory">
+                    <div class="filterCategoryHeader">ДИЗАЙНЕРЫ</div>
+                    <div class="hidden">
+                        <a href="#">АКСЕССУАРЫ</a>
+                        <a href="#">СУМКИ</a>
+                        <a href="#">ДЖИНСЫ</a>
+                        <a href="#">ХУДИ И СВИТЕРА</a>
+                        <a href="#">КУРТКИ И ПЛАЩИ</a>
+                        <a href="#">ПОЛО</a>
+                        <a href="#">МАЙКИ</a>
+                        <a href="#">ОБУВЬ</a>
+                        <a href="#">ДЖЕМПЕРА</a>
+                        <a href="#">ФУТБОЛКИ</a>
+                        <a href="#">РЕМНИ</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="filtersRight">
+            <div class="filterTrending">
+                В ТРЕНДЕ
+                <img src="images/filterArrow.svg" alt="">
+            </div>
+            <div class="filterSize">
+                <div class="filterSizeWrap">
+                    РАЗМЕР
+                    <img src="images/filterArrow.svg" alt="">
+                </div>
+                <div class="filterSizes hidden">
+                    <div>
+                        <input type="checkbox"> XS
+                    </div>
+                    <div>
+                        <input type="checkbox"> S
+                    </div>
+                    <div>
+                        <input type="checkbox"> M
+                    </div>
+                    <div>
+                        <input type="checkbox"> L
+                    </div>
+                </div>
+            </div>
+            <div class="filterPrice">
+                ЦЕНА
+                <img src="images/filterArrow.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="featured container">
+    <h2 class="featuredHeader">Новые поступления</h2>
+    <div class="featuredTitle">Подборка на основе предпочтений покупателей за неделю</div>
+
+    <div class="featuredItems">
+        <div class="featuredItem" data-id="1" data-name="ELLERY X M'O CAPSULE" data-price="5200">
+            <div class="featuredImgWrap">
+                <img src="images/featured/1.jpg" alt="">
+                <div class="featuredImgDark">
+                    <button class="addToCart">
+                        <img src="images/cart.svg" alt="">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+
+            <div class="featuredData">
+                <div class="featuredName">
+                    ELLERY X M'O CAPSULE
+                </div>
+                <div class="featuredText">
+                    Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                    teams
+                    up with Moda Operandi.
+                </div>
+                <div class="featuredPrice">
+                    5200.00
+                </div>
+            </div>
+        </div>
+
+        <div class="featuredItem" data-id="2" data-name="ELLERY X M'O" data-price="4200">
+            <div class="featuredImgWrap">
+                <img src="images/featured/2.jpg" alt="">
+                <div class="featuredImgDark">
+                    <button class="addToCart">
+                        <img src="images/cart.svg" alt="">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+
+            <div class="featuredData">
+                <div class="featuredName">
+                    ELLERY X M'O
+                </div>
+                <div class="featuredText">
+                    Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                    teams
+                    up with Moda Operandi.
+                </div>
+                <div class="featuredPrice">
+                    4200.00
+                </div>
+            </div>
+        </div>
+
+        <div class="featuredItem" data-id="3" data-name="ELLERY X" data-price="3800">
+            <div class="featuredImgWrap">
+                <img src="images/featured/3.jpg" alt="">
+                <div class="featuredImgDark">
+                    <button class="addToCart">
+                        <img src="images/cart.svg" alt="">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+
+            <div class="featuredData">
+                <div class="featuredName">
+                    ELLERY X
+                </div>
+                <div class="featuredText">
+                    Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                    teams
+                    up with Moda Operandi.
+                </div>
+                <div class="featuredPrice">
+                    3800.00
+                </div>
+            </div>
+        </div>
+
+        <div class="featuredItem" data-id="4" data-name="ELLERY" data-price="1200">
+            <div class="featuredImgWrap">
+                <img src="images/featured/4.jpg" alt="">
+                <div class="featuredImgDark">
+                    <button class="addToCart">
+                        <img src="images/cart.svg" alt="">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+
+            <div class="featuredData" data-id="3" data-name="ELLERY X M'O CAPSULE" data-price="1200">
+                <div class="featuredName">
+                    ELLERY
+                </div>
+                <div class="featuredText">
+                    Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                    teams
+                    up with Moda Operandi.
+                </div>
+                <div class="featuredPrice">
+                    1200.00
+                </div>
+            </div>
+        </div>
+
+        <div class="featuredItem" data-id="5" data-name="M'O CAPSULE" data-price="3300">
+            <div class="featuredImgWrap">
+                <img src="images/featured/5.jpg" alt="">
+                <div class="featuredImgDark">
+                    <button class="addToCart">
+                        <img src="images/cart.svg" alt="">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+
+            <div class="featuredData">
+                <div class="featuredName">
+                    M'O CAPSULE
+                </div>
+                <div class="featuredText">
+                    Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                    teams
+                    up with Moda Operandi.
+                </div>
+                <div class="featuredPrice">
+                    3300.00
+                </div>
+            </div>
+        </div>
+
+        <div class="featuredItem" data-id="6" data-name="CAPSULE" data-price="4900">
+            <div class="featuredImgWrap">
+                <img src="images/featured/6.jpg" alt="">
+                <div class="featuredImgDark">
+                    <button class="addToCart">
+                        <img src="images/cart.svg" alt="">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div>
+
+            <div class="featuredData">
+                <div class="featuredName">
+                    CAPSULE
+                </div>
+                <div class="featuredText">
+                    Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery
+                    teams
+                    up with Moda Operandi.
+                </div>
+                <div class="featuredPrice">
+                    4900.00
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#">
+            <img src="images/chevronLeft.svg" alt="">
+        </a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6.....20</a>
+        <a href="#">
+            <img src="images/chevronRight.svg" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="services">
+    <div class="container">
+
+        <div class="serivceUnit">
+            <img src="images/services/delivery.svg" alt="">
+            <div class="servicesTitle">
+                Бесплатная доставка
+            </div>
+            <div class="servicesText">
+                Доставка по всему миру. Гарантия возврата неподошедшей вещи в течение 1 месяца.
+            </div>
+        </div>
+
+        <div class="serivceUnit">
+            <img src="images/services/discount.svg" alt="">
+            <div class="servicesTitle">
+                Продажи и скидки
+            </div>
+            <div class="servicesText">
+                Доставка по всему миру. Гарантия возврата неподошедшей вещи в течение 1 месяца.
+            </div>
+        </div>
+
+        <div class="serivceUnit">
+            <img src="images/services/assurance.svg" alt="">
+            <div class="servicesTitle">
+                Контроль качества
+            </div>
+            <div class="servicesText">
+                Доставка по всему миру. Гарантия возврата неподошедшей вещи в течение 1 месяца.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="subscribe">
+    <div class="container">
+
+        <div class="subscribeLeft">
+            <img src="images/subscribeUser.png" alt="">
+            <div class="subscribeUserText">
+                “Рады видеть вас среди наших клиентов“
+            </div>
+        </div>
+
+        <div class="subscribeRight">
+            <div class="subscribeTitle">
+                ПОДПИСКА
+            </div>
+            <div class="subscribeText">
+                НА НАШИ НОВОСТИ И АКЦИИ
+            </div>
+            <form action="" class="subscribeForm">
+                <input type="text" placeholder="Введите свой E-mail">
+                <button>Подписаться</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footerLeft">
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-pinterest-p"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <div class="footerRight">
+            &copy; 2022  Все права защищены.
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="basket.js"></script>
+</body>
+
+</html>
